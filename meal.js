@@ -50,7 +50,7 @@ document.querySelector("input").oninput=(e)=>{   // oninput is helps whatever yo
 
 // console.log(e) check what is called to call input = > target
 // console.log(arr) // now when you search on input you can see them on console
-let veri = dizi.meals.filter((a)=>a.strMeal.includes(a.target.value))
+let veri = arr.meals.filter((a)=>a.strMeal.includes(e.target.value))
 showScreen(veri)
 } 
 
