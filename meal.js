@@ -11,9 +11,14 @@ fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=") // .then((res)=>c
 //! open the function first and call the function with forEach
 const showScreen = (data) => {
 
-  data.forEach((a) => {
+const mealsDiv = document.querySelector(".food")
+ 
+mealsDiv.innerHTML= "";
 
-    document.querySelector(".food").innerHTML += `
+data.forEach((a) => {
+
+   
+mealsDiv.innerHTML += `
 
 
 <div class="col-sm-6 col-md-4">
@@ -46,7 +51,7 @@ document.querySelector("input").oninput=(e)=>{   // oninput is helps whatever yo
 // console.log(e) check what is called to call input = > target
 // console.log(arr) // now when you search on input you can see them on console
 dizi.meals.filter((a)=>a.strMeal.includes(a.target.value))
-
+showScreen(veri)
 } 
 
 
