@@ -34,11 +34,11 @@ mealsDiv.innerHTML += `
 
 //! filter by flag
 document.querySelectorAll("img").forEach(
-  (e) => 
+  (a) => 
   // since there is more than one flag choose querySelecterAll
-  (e.onclick = () => {
+  (a.onclick = () => {
     fetch(
-      `www.themealdb.com/api/json/v1/1/filter.php?a=${e.id}`
+      `www.themealdb.com/api/json/v1/1/filter.php?a=${a.id}`
     ).then((response) => response.json())
       .then((veri) => showScreen(veri.meals)); //click one of the flag and check =>  all the time check if they are object or array
   })
@@ -50,7 +50,7 @@ document.querySelector("input").oninput=(e)=>{   // oninput is helps whatever yo
 
 // console.log(e) check what is called to call input = > target
 // console.log(arr) // now when you search on input you can see them on console
-let veri = arr.meals.filter((a)=>a.strMeal.includes(e.target.value))
+let veri = arr.meals.filter((a)=>a.strMeal.toLowerCase().includes(e.target.value))
 showScreen(veri)
 } 
 
