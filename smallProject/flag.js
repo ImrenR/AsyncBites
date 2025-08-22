@@ -25,7 +25,8 @@ const bastirCountry = (veri) => {
   <li class="list-group-item">
 ${Object.values(a.languages)}
   </li>
-  <li class="list-group-item">  </li>
+  <li class="list-group-item">
+  ${Object.values(a.currencies)[0].name}  </li>
   
 </ul>
  </div>
