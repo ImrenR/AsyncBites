@@ -2,7 +2,7 @@ const getirCountry = async () => {
  const res = await fetch("https://restcountries.com/v3.1/all");
 
  const veri = await res.json () // dont forget to change to json and add await
- bastirCountry(veri)
+ bastirCountry(veri) // veri gonderildi asagida tanimla
 };
 getirCountry()
 
@@ -17,11 +17,11 @@ veri.forEach((a) => {
   <div class="card text-start w-50 shadow-lg bg-light my-4" style="width: 18rem;">
   <img src="${a.flags.png}" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title"></h5>
+    <h5 class="card-title">${a.name.common}</h5>
     
 <ul class="list-group list-group-flush">
   <li class="list-group-item">
- 
+ ${a.capital}
    </li>
   <li class="list-group-item">
 
