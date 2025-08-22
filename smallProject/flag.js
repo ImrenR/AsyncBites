@@ -34,3 +34,15 @@ ${Object.values(a.languages)}
   `;
   });
 };
+//! Ekrana bastirilacak dizi elemanlarinin key ler farkli farkliysa ===>>
+//!!! Object.value() ogeleri, nesnede bulunan numaralandirilabilir bir dizi dondurur.
+//! istenen nesnenin icindeki objectin value larini yaz, bu valuelar, object.value
+//! sayesinde dizi icinde toplanir.
+
+//? Object.value(country.currencies)= currencies in valuelarini bir dizide toplar
+
+//* TRY : nin value sini dizi yapar 0 indexli : [{name: 'Turkish lira', symbol:'t'}]
+//* TRY key silinir.
+
+//* Object.values(country.languages)=languages in valuelarini bir dizide toplat [eng,spanish] Eng key i silinir.
+ 
